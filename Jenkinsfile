@@ -3,8 +3,8 @@ pipeline {
 	
   environment {
     DOCKERHUB_CREDENTIALS = credentials('docker-hub-cred')
-    REMOTE_SERVER = '63.32.90.211'
-    REMOTE_USER = 'ubuntu' 	  	  
+    REMOTE_SERVER = '18.202.55.9'
+    REMOTE_USER = 'ec2-user' 	  	  
   }
 	
   // Fetch code from GitHub
@@ -12,7 +12,7 @@ pipeline {
   stages {
     stage('checkout') {
       steps {
-        git branch: 'dev', url: 'https://github.com/palakbhawsar98/JavaWebApp'
+        git branch: 'dev', url: 'https://github.com/chijiokeNwafor/JavaWebApp'
 
       }
     }
